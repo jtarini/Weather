@@ -1,0 +1,94 @@
+PODS:
+  - Alamofire (4.8.1)
+  - AlamofireNetworkActivityIndicator (2.3.0):
+    - Alamofire (~> 4.7)
+  - DZNEmptyDataSet (1.8.1)
+  - Moya (12.0.1):
+    - Moya/Core (= 12.0.1)
+  - Moya-ObjectMapper/Core (2.8):
+    - Moya (~> 12.0)
+    - ObjectMapper (~> 3.4)
+  - Moya-ObjectMapper/RxSwift (2.8):
+    - Moya-ObjectMapper/Core
+    - Moya/RxSwift
+    - RxSwift (~> 4)
+  - Moya/Core (12.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.0)
+  - Moya/RxSwift (12.0.1):
+    - Moya/Core
+    - RxSwift (~> 4.0)
+  - ObjectMapper (3.4.2)
+  - Result (4.1.0)
+  - RxAtomic (4.4.1)
+  - RxSwift (4.4.1):
+    - RxAtomic (~> 4.4)
+  - SDWebImage (4.4.6):
+    - SDWebImage/Core (= 4.4.6)
+  - SDWebImage/Core (4.4.6)
+  - SkeletonView (1.4.2)
+  - SVPullToRefresh (0.4.1)
+  - Swinject (2.6.0)
+  - SwinjectStoryboard (2.2.0):
+    - Swinject (~> 2.6)
+
+DEPENDENCIES:
+  - AlamofireNetworkActivityIndicator
+  - DZNEmptyDataSet
+  - Moya-ObjectMapper/RxSwift
+  - SDWebImage
+  - SkeletonView
+  - SVPullToRefresh
+  - Swinject (from `https://github.com/Swinject/Swinject.git`, branch `master`)
+  - SwinjectStoryboard (from `https://github.com/Swinject/SwinjectStoryboard.git`, branch `master`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireNetworkActivityIndicator
+    - DZNEmptyDataSet
+    - Moya
+    - Moya-ObjectMapper
+    - ObjectMapper
+    - Result
+    - RxAtomic
+    - RxSwift
+    - SDWebImage
+    - SkeletonView
+    - SVPullToRefresh
+
+EXTERNAL SOURCES:
+  Swinject:
+    :branch: master
+    :git: https://github.com/Swinject/Swinject.git
+  SwinjectStoryboard:
+    :branch: master
+    :git: https://github.com/Swinject/SwinjectStoryboard.git
+
+CHECKOUT OPTIONS:
+  Swinject:
+    :commit: faedc7da6e8c214d11c74e122662b5756f75d076
+    :git: https://github.com/Swinject/Swinject.git
+  SwinjectStoryboard:
+    :commit: e687b47f1a3469a9a0747fe570d30ea48ff6d10d
+    :git: https://github.com/Swinject/SwinjectStoryboard.git
+
+SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  AlamofireNetworkActivityIndicator: 18346ff6d770d9513d0ac6f2d99706f40f93dbaa
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
+  Moya-ObjectMapper: c514b5eafcfd5e260f85f7a5bf66895a217e2b37
+  ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  RxAtomic: f8d6adc1ccb87a767811269e4875887bc74dbf19
+  RxSwift: 92fcf68dfef21f3e2ab1965363d9e7b3d787597e
+  SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
+  SkeletonView: c2523c3c8c6510e273e49a3bf364a434744c3914
+  SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
+  Swinject: 48a96cda93633cf2860697b4ce76ab5db9ebaca2
+  SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
+
+PODFILE CHECKSUM: 5500a95b6b4665ac0f6fc9a1faf09ff9b65f2dd8
+
+COCOAPODS: 1.6.1
