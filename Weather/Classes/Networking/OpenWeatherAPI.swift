@@ -27,7 +27,7 @@ enum OpenWeather {
   case citiesByIds(_ ids: String)
   case cityByCoordinate(_ lat: Double, lon: Double)
   
-  static let OpenWeatherAPIKey = "d6c088e06a698cd73b6046617b94997c" // "---yourkeyhere---"
+  static let OpenWeatherAPIKey = "---your-OpenWeatherMapAPI-key-here---"
   
 }
 

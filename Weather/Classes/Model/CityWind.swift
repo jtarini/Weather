@@ -6,4 +6,18 @@
 //  Copyright © 2019 jtarini. All rights reserved.
 //
 
-import Foundation
+import ObjectMapper
+
+class CityWind: Mappable {
+  
+  var speed = 0.0
+  
+  required convenience init?(map: Map) {
+    self.init()
+  }
+  
+  func mapping(map: Map) {
+    speed <- map["speed"]
+  }
+  
+}

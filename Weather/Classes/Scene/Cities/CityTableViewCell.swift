@@ -6,4 +6,18 @@
 //  Copyright © 2019 jtarini. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class CityTableViewCell: UITableViewCell {
+  
+  @IBOutlet weak var name: UILabel!
+  @IBOutlet weak var temperature: UILabel!
+  @IBOutlet weak var weatherIcon: UIImageView!
+  
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    
+    showAnimatedSkeleton()
+  }
+  
+}
