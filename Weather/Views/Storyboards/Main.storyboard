@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EKO-j4-ZPZ">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="UBy-Sc-TJY">
+            <objects>
+                <navigationController id="EKO-j4-ZPZ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Q8s-jC-RA3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7Wf-PJ-bXc" kind="relationship" relationship="rootViewController" id="snE-Cr-vGh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P8i-Fx-PGN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Cities View Controller-->
+        <scene sceneID="2fK-IB-zcl">
+            <objects>
+                <viewController storyboardIdentifier="CitiesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7Wf-PJ-bXc" customClass="CitiesViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ijU-7b-Oeg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tOU-YU-bJb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="7Wf-PJ-bXc" id="8Ue-Oa-DV0"/>
+                                    <outlet property="delegate" destination="7Wf-PJ-bXc" id="bpS-ic-CSq"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tOU-YU-bJb" firstAttribute="trailing" secondItem="13E-jg-mln" secondAttribute="trailing" id="Eia-Wi-gDK"/>
+                            <constraint firstItem="tOU-YU-bJb" firstAttribute="top" secondItem="13E-jg-mln" secondAttribute="top" id="gyK-Y1-iBe"/>
+                            <constraint firstItem="tOU-YU-bJb" firstAttribute="leading" secondItem="13E-jg-mln" secondAttribute="leading" id="jjb-0P-Hpw"/>
+                            <constraint firstAttribute="bottom" secondItem="tOU-YU-bJb" secondAttribute="bottom" id="rIt-Yn-QDh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="13E-jg-mln"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sDR-Xn-6Tk"/>
+                    <connections>
+                        <outlet property="tableView" destination="tOU-YU-bJb" id="CD4-x4-9o1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1KG-f1-hY9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
+        </scene>
+        <!--City View Controller-->
+        <scene sceneID="CGs-2C-Nzm">
+            <objects>
+                <viewController storyboardIdentifier="CityViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ycr-qd-tso" customClass="CityViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2tJ-3j-agc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-wind" translatesAutoresizingMaskIntoConstraints="NO" id="LLv-xf-vWz">
+                                <rect key="frame" x="156" y="101" width="100" height="73"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wind Speed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVa-QP-4ci">
+                                <rect key="frame" x="40" y="177" width="333" height="41"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.1 m/s" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIs-Cn-epU">
+                                <rect key="frame" x="110" y="226" width="193" height="30"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="30"/>
+                                <color key="textColor" red="0.13725490200000001" green="0.46274509800000002" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-cloud" translatesAutoresizingMaskIntoConstraints="NO" id="c2P-NO-ZxS">
+                                <rect key="frame" x="157" y="353.5" width="100" height="51"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amj-qE-7i9">
+                                <rect key="frame" x="110" y="455.5" width="193" height="30"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="30"/>
+                                <color key="textColor" red="0.13725490200000001" green="0.46274509800000002" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clouds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Rd-5a-4Vh">
+                                <rect key="frame" x="40" y="407.5" width="333" height="41"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HXB-4s-P7o" firstAttribute="trailing" secondItem="ZIs-Cn-epU" secondAttribute="trailing" constant="111" id="3Tm-3B-i70"/>
+                            <constraint firstItem="LLv-xf-vWz" firstAttribute="leading" secondItem="HXB-4s-P7o" secondAttribute="leading" constant="156" id="4Y9-r0-LIw"/>
+                            <constraint firstItem="nVa-QP-4ci" firstAttribute="leading" secondItem="HXB-4s-P7o" secondAttribute="leading" constant="40" id="6d5-6Y-n7F"/>
+                            <constraint firstItem="HXB-4s-P7o" firstAttribute="trailing" secondItem="amj-qE-7i9" secondAttribute="trailing" constant="111" id="AFV-fS-SJ0"/>
+                            <constraint firstItem="HXB-4s-P7o" firstAttribute="trailing" secondItem="1Rd-5a-4Vh" secondAttribute="trailing" constant="41" id="AYN-42-tHA"/>
+                            <constraint firstItem="HXB-4s-P7o" firstAttribute="trailing" secondItem="nVa-QP-4ci" secondAttribute="trailing" constant="41" id="CP1-3u-UMP"/>
+                            <constraint firstItem="1Rd-5a-4Vh" firstAttribute="top" secondItem="c2P-NO-ZxS" secondAttribute="bottom" constant="3" id="CUT-le-Ubz"/>
+                            <constraint firstItem="ZIs-Cn-epU" firstAttribute="leading" secondItem="HXB-4s-P7o" secondAttribute="leading" constant="110" id="I9E-KF-5VH"/>
+                            <constraint firstItem="c2P-NO-ZxS" firstAttribute="top" secondItem="ZIs-Cn-epU" secondAttribute="bottom" constant="97.5" id="JRY-PJ-HJL"/>
+                            <constraint firstItem="ZIs-Cn-epU" firstAttribute="top" secondItem="LLv-xf-vWz" secondAttribute="bottom" constant="52" id="NA7-ev-qiZ"/>
+                            <constraint firstItem="amj-qE-7i9" firstAttribute="top" secondItem="c2P-NO-ZxS" secondAttribute="bottom" constant="51" id="Obl-uv-ir2"/>
+                            <constraint firstItem="amj-qE-7i9" firstAttribute="leading" secondItem="HXB-4s-P7o" secondAttribute="leading" constant="110" id="b73-ad-gwD"/>
+                            <constraint firstItem="1Rd-5a-4Vh" firstAttribute="leading" secondItem="HXB-4s-P7o" secondAttribute="leading" constant="40" id="gQ4-ra-JfI"/>
+                            <constraint firstItem="HXB-4s-P7o" firstAttribute="trailing" secondItem="LLv-xf-vWz" secondAttribute="trailing" constant="158" id="ltJ-iG-mzf"/>
+                            <constraint firstItem="nVa-QP-4ci" firstAttribute="top" secondItem="LLv-xf-vWz" secondAttribute="bottom" constant="3" id="nSi-uc-W2g"/>
+                            <constraint firstItem="LLv-xf-vWz" firstAttribute="top" secondItem="HXB-4s-P7o" secondAttribute="top" constant="57" id="uMA-4Q-Gg9"/>
+                            <constraint firstItem="HXB-4s-P7o" firstAttribute="trailing" secondItem="c2P-NO-ZxS" secondAttribute="trailing" constant="157" id="uyl-ba-dxp"/>
+                            <constraint firstItem="c2P-NO-ZxS" firstAttribute="leading" secondItem="HXB-4s-P7o" secondAttribute="leading" constant="157" id="vmx-kL-pOH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HXB-4s-P7o"/>
+                    </view>
+                    <connections>
+                        <outlet property="cloudLabelTitle" destination="1Rd-5a-4Vh" id="e89-Ij-WDx"/>
+                        <outlet property="cloudLabelValue" destination="amj-qE-7i9" id="Zze-K1-wzg"/>
+                        <outlet property="windLabelTitle" destination="nVa-QP-4ci" id="djF-sJ-LDn"/>
+                        <outlet property="windLabelValue" destination="ZIs-Cn-epU" id="vxE-bu-ya8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="REk-sj-ePd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="665.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="img-cloud" width="100" height="51"/>
+        <image name="img-wind" width="100" height="72.5"/>
+    </resources>
+</document>

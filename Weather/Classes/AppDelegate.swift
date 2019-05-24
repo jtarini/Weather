@@ -7,16 +7,27 @@
 //
 
 import UIKit
+import AlamofireNetworkActivityIndicator
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
 
-
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
+    NetworkActivityIndicatorManager.shared.isEnabled = true
+    
+    setCustomViewProperties()
+    
     return true
+  }
+  
+  fileprivate func setCustomViewProperties() {
+    UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Avenir-Medium", size: 19)!, NSAttributedString.Key.foregroundColor: UIColor.white]
+    
+    UINavigationBar.appearance().tintColor = UIColor.white
+    UINavigationBar.appearance().barTintColor = UIColor(red: 35 / 255, green: 118 / 255, blue: 172 / 255, alpha: 1.0)
+    UINavigationBar.appearance().isTranslucent = false
   }
 
   func applicationWillResignActive(_ application: UIApplication) {
@@ -41,6 +52,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
   }
 
-
 }
-
