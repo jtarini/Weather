@@ -2,6 +2,10 @@
 
 iOS application built to highlight MVP (Model View Presenter) with Moya, RxSwift, Swinject, ObjectMapper and SkeletonView. This example project is integrated with OpenWeatherMap API.
 
+## Instructions
+
+Add your OpenWeatherMap API Key in the class Classes/Networking/OpenWeatherAPI.swift line 30
+
 ## Built With
 
 * [Moya](https://github.com/Moya/Moya)
