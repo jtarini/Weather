@@ -12,7 +12,7 @@ protocol CitiesView: class {
   
   var presenter: CitiesPresenter! { get set }
   
-  func reloadCities(_ repositories: [City])
+  func reloadCities(_ cities: [City])
   func showEmptyView()
   func showError(_ error: Error)
   
